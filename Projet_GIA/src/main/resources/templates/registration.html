@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>registration</title>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=email], select, textarea {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=date], select, textarea {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=password], select, textarea {
+  width: 25%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #048b9a;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+</style>
+
+</head>
+<body>
+
+ <h1>Registration</h1>
+  <form th:action="@{/registration}" method="post" th:object="${user}" >
+    
+     first name: <input type="text" th:field="*{nom_user_fr}" /><br>
+     last name: <input type="text" th:field="*{prenom_user_fr}" /><br>
+     email: <input type="email" th:field="*{email1_user}" /><br>
+     username: <input type="text" th:field="*{username}" /><br>
+     password: <input type="password" th:field="*{pwd_user}" /><br>
+     phone number: <input type="text" th:field="*{tel1_user}" /><br>
+     birthday date: <input type="date" th:field="*{date_naiss_user}" /><br>
+     adress: <input type="text" th:field="*{adr_user}" /><br>
+  
+  <input type="submit" value="register" />
+  
+  </form>
+
+
+</body>
+</html>
